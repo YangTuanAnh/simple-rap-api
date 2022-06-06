@@ -1,5 +1,5 @@
 const button = document.querySelector("button")
-button.addEventListener("click", async () =>
+button.addEventListener("click", () =>
 {
     const res = await fetch('/api/' + document.querySelector("input").value)
     const data = await res.json()
@@ -7,3 +7,5 @@ button.addEventListener("click", async () =>
     const birthName = document.querySelector("h2")
     birthName.innerHTML = data["birthName"]
 })
+
+console.log('Working')
